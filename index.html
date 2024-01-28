@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LordYao</title>
+  <meta name="keywords" content="LordYao,yaoqs,docsify">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="LordYao的blog，要庆生">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <!-- 侧边栏插件的样式 -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" />
+  <!--toc-->
+  <!--<link rel="stylesheet" href="https://unpkg.com/docsify-toc@1.0.0/dist/toc.css">-->
+  <!--fontawesome-->
+  <link rel="stylesheet" href="//unpkg.com/@fortawesome/fontawesome-free/css/fontawesome.css" />
+  <link rel="stylesheet" href="//unpkg.com/@fortawesome/fontawesome-free/css/brands.css" />
+  <link rel="stylesheet" href="//unpkg.com/@fortawesome/fontawesome-free/css/regular.css" />
+  <link rel="stylesheet" href="//unpkg.com/@fortawesome/fontawesome-free/css/solid.css" />
+  <!--banner-->
+  <!--<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-top-banner-plugin@latest/dist/style.css"/>-->
+  <!--print-->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-print@latest/dist/style.css"/>
+
+  <!--JQuery-->
+  <script type="text/javascript" src="https://cdn.staticfile.org/jquery/3.7.0/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.staticfile.org/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+  <!--d3js-->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+  <script>
+    if (typeof navigator.serviceWorker !== 'undefined') {
+      navigator.serviceWorker.register('sw.js')
+    }
+  </script>
+  <div id="app">加载中...</div>
+  <script>
+    window.$docsify = {
+      name: '<span>LordYao</span>',
+      nameLink: '/',
+      repo: 'https://github.com/yaoqs/Docsify-lordyao',
+      maxLevel: 3,
+      logo: '/images/githubavatar.png',
+      coverpage: false,//覆盖页
+      onlyCover: true,//只在访问主页时加载封面。
+      loadNavbar: true,//导航条
+      mergeNavbar: true,//小屏设备下合并导航栏到侧边栏
+      loadSidebar: true, // 打开侧边栏设置
+      /*alias: {
+      '/.* /_sidebar.md': '/_sidebar.md',
+      '/posts/_sidebar.md': '/_sidebar.md',
+      },*/
+      autoHeader: true,//同时设置 loadSidebar 和 autoHeader 后，可以根据 _sidebar.md 的内容自动为每个页面增加标题
+      subMaxLevel: 2, // 在sidebar目录中显示二级标题
+      homepage: 'index.md',//主页
+      auto2top: true,//切换页面后是否自动跳转到页面顶部
+      notFoundPage: 'Donate.md',//在找不到指定页面时加载_404.md或自定义
+      // 甚至直接渲染其他仓库
+      //basePath:'https://raw.githubusercontent.com/ryanmcdermott/clean-code-javascript/master/',
+      // 启用相对路径
+      relativePath: true,
+      executeScript: true,//执行文档里的 script 标签里的脚本，只执行第一个 script
+      formatUpdated: '{MM}/{DD} {HH}:{mm}',//可以通过 {docsify-updated} 变量显示文档更新日期. 并且通过 formatUpdated配置日期格式
+      externalLinkTarget: '_self', // default: '_blank'外部链接的打开方式。
+      cornerExternalLinkTarget: '_self', // default: '_blank'右上角链接的打开方式
+      //插件设置
+      // -----------------------------------------------------
+      // 搜索配置
+      search: {
+          maxAge: 86400000,
+          paths: 'auto',
+          noData: '找不到结果',
+          depth: 4,
+          hideOtherSidebarContent: false,
+          namespace: 'LordYao'
+      },
+      // 分页导航插件
+      pagination: {
+          previousText: '上一卷',
+          nextText: '下一卷',
+          crossChapter: true,
+          crossChapterText: true
+      },
+      // docsify-copy-code (defaults)
+      copyCode: {
+        buttonText: 'Copy to clipboard',
+        errorText: 'Error',
+        successText: 'Copied',
+      },
+      // 文本高亮
+      //> [!note|style:callout|label:测试]> 测试自定义
+      'flexible-alerts': {
+          style: 'flat',
+          note: {
+              label: "信息"
+          },
+          tip: {
+              label: "提示"
+          },
+          warning: {
+              label: "注意"
+          },
+          attention: {
+              label: "切记"
+          }
+      },
+      sidebarDisplayLevel: 2,
+      // 页脚信息插件
+      loadFooter: true,
+      //<!-- tabs:start -->...<!-- tabs:end -->
+      tabs: {
+        persist    : true,      // default
+        sync       : true,      // default
+        theme      : 'classic', // default
+        tabComments: true,      // default
+        tabHeadings: true       // default
+      },
+      topBanner: {
+        content: '你好，我尊贵的客人',
+        textAlign: 'center'
+      },
+      share: {
+        reddit: true,
+        linkedin: true,
+        facebook: true,
+        twitter: true,
+        whatsapp: true,
+        telegram: true,
+      },
+      plugins: [
+        function(hook) {
+
+          hook.afterEach(function(html) {
+
+          });
+        }
+      ]
+    }
+    //
+  </script>
+
+  <!-- Docsify v4 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <!-- search -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <script src="//polyfill.io/v3/polyfill.min.js?features=String.prototype.normalize"></script>
+  <!--banner-->
+  <!--<script src="https://cdn.jsdelivr.net/npm/docsify-top-banner-plugin@latest/dist/index.js"></script>-->
+  <!-- 如果文档里的 script 是内联脚本，可以直接执行；而如果是外链脚本（即 js 文件内容由 src 属性引入），则需要使用此插件 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/external-script.min.js"></script>
+  <!-- Medium's 风格的图片缩放插件 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+  <!--在 Github 上编辑
+  <script src="//cdn.jsdelivr.net/npm/docsify-edit-on-github"></script>-->
+  <!--复制到剪贴板-->
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+  <!--分享-->
+  <script src="//unpkg.com/docsify-share/build/index.min.js"></script>
+  <!--TOC-->
+  <!--<script src="https://unpkg.com/docsify-toc@1.0.0/dist/toc.js"></script>-->
+  <!-- Prism -->
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-php.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-c.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-cpp.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-javascript.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-markdown.min.js"></script>
+  <!--字数统计-->
+  <script src="https://cdn.jsdelivr.net/npm/docsify-count@latest/dist/countable.min.js"></script>
+  <!-- docsify plugin: Flexible Alerts -->
+  <script src="https://unpkg.com/docsify-plugin-flexible-alerts"></script>
+  <!--docsify的分页导航插件-->
+  <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <!-- docsify-tabs (latest v1.x.x) -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
+  <!-- 侧边栏扩展与折叠 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+  <!-- 页脚信息 -->
+  <script src="//cdn.jsdelivr.net/npm/@alertbox/docsify-footer/dist/docsify-footer.min.js"></script>
+  <!--加载一个远程的md文件-->
+  <script src="//unpkg.com/docsify-remote-markdown/dist/docsify-remote-markdown.min.js"></script>
+  <!-- Latest v2.x.x -->
+  <script src="https://unpkg.com/docsify-copy-code@2"></script>
+  <!--slides=ppt-->
+  <!-- slide:break --><!-- slide:break-# -->
+  <script src="//unpkg.com/docsify-slides/dist/docsify-slides.min.js"></script>
+  <!--fontawesome-->
+  <script src="//unpkg.com/docsify-fontawesome/dist/docsify-fontawesome.min.js"></script>
+  <!--print-->
+  <script src="https://printjs-4de6.kxcdn.com/print.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-print@latest/dist/index.js"></script>
+  <!-- PDFObject.js is a required dependency of this plugin -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/pdfobject/2.1.1/pdfobject.min.js"></script>
+  <!-- This is the source code of the pdf embed plugin or use this if you are not hosting the file yourself -->
+  <script src="//unpkg.com/docsify-pdf-embed-plugin/src/docsify-pdf-embed.js"></script>
+
+  <!-- Vue 3.x -->
+  <!-- Production -->
+  <script src="//cdn.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js"></script>
+  <!-- Development -->
+  <script src="//cdn.jsdelivr.net/npm/vue@3/dist/vue.global.js"></script>
+</body>
+  <script type="text/javascript" src="zanzhu_yaoqs.js"></script>
+  <script>
+    $(function () {
+        new Rewardtip(
+            {
+                "tiptext": "谢谢支持/Thanks...",
+                "tipimg": { img: "/images/ali.gif", width: "50px", height: "50px" },  //可选
+                "more": "https://yaoqs.github.io/Donate",
+                "tipshow": "<img src='/images/ali.gif'/>",                     //可选
+                "list": [
+                    { name: "微信收款码", qrimg: "/images/微信收款码.png" },
+                    { name: "微信打赏码", qrimg: "/images/微信打赏码.png" },
+                    { name: "支付宝收款码", qrimg: "/images/支付宝收款码.jpg" },
+                    { name: "支付宝红包码", qrimg: "/images/支付宝红包码.jpg" }
+                ],
+                "link": [
+                    { name: "paypal", desc: "paypal.me/LordYao", link: "https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=243292490@qq.com&currency_code=USD&amount=1&return=http://yaoqs.github.com/about&item_name=LordYao%27s%20Blog&undefined_quantity=1" }
+                ]/*,
+                    fn:(function(){
+                        return alert("解放思想，发展生产力");
+                    })()*/
+            });
+    })
+
+  </script>
+  <script>//复制加版权
+    jQuery(document).on('copy', function (e) {
+      var selected = window.getSelection();
+      var selectedText = selected.toString().replace(/\n/g, '<br>');  // Solve the line breaks conversion issue 处理换行转换的问题
+      var copyFooter = '<br>---------------------<br>著作权归作者所有。<br>'
+        + '商业转载请联系作者获得授权，非商业转载请注明出处。<br>'
+        + '<br>作者：' + document.getElementById('author').innerText
+        + '<br>复制时间: ' + Date.now()
+        + '<br>原文链接：' + document.location.href
+        + '<br>© 版权声明：本文为「' + document.getElementById('author').innerText + '」的原创文章，遵循 CC 4.0 BY-NC-SA 版权协议，转载请附上原文出处链接及本声明。';
+
+      var copyHolder = $('<div>', { id: 'temp', html: selectedText + copyFooter, style: { position: 'absolute', left: '-99999px' } });
+
+      $('body').append(copyHolder);
+      selected.selectAllChildren(copyHolder[0]);
+      window.setTimeout(function () {
+        copyHolder.remove();
+      }, 0);
+    });
+
+  </script>
+  <script>
+    $(function(){
+  var year = new Date(Date.now()).getFullYear();
+  document.getElementById("year").innerText = year.toString();
+    })
+  </script>
+  <script>
+    //<div id='qrcode' style="width:173px;height:173px;"></div>
+    $(function(){
+      $("<div id='qrcode' style='width:173px;height:173px;'></div>").appendTo($('footer'));
+    $('#qrcode').qrcode({width: 173,height: 173,text: document.URL})
+    //console.log(document.URL)
+    })
+  </script>
+</html>
