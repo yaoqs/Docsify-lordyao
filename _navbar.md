@@ -2,6 +2,6 @@
 * [About](/index)
 * [Lab](https://yaoqs.github.io/Lab/widget.html)
 * [Navigator](https://yaoqs.github.io/resource-navigator)
-* [Feature](/feature)
+* [Feature](https://yaoqs.github.io/Feature)
 * [Donate](/Donate)
 * [Scholar](https://yaoqs.github.io/Scholar)
